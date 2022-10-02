@@ -1,0 +1,12 @@
+<app-article-card [title]="'James\'s Poll'">
+  <div card-body class="actor-voters-content">
+    <h3 class="actor-voters-content-title">
+      If you had to choose, which actor do you<br>
+      prefer to be the next Darkman?
+    </h3>
+    <app-actor-vote *ngFor="let actorVote of actorVoters" [actorVote]="actorVote"></app-actor-vote>
+    <div class="actor-voters-content-vote-btn">
+      <button type="button" class="btn btn-outline-secondary">Vote Now!</button>
+    </div>
+  </div>
+</app-article-card>

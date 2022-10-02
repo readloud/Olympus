@@ -1,0 +1,117 @@
+<div class="app-layout">
+  <header class="header">
+    <div class="header-logo">
+      <a routerLink="/app" class="layout-header--logo--link header-logo-icon">
+        <img class="layout-header--logo--link__icon" alt="Logo icon" src="../../../assets/images/logo.png"/>
+      </a>
+    </div>
+    <div class="header-content">
+      <div class="header-left">
+        <div class="header-left-search">
+          <span class="header-left-search--current-page">Profile page</span>
+          <div id="search">
+            <input class="header-left-search--input" type="text" placeholder="Search here people or pages...">
+          </div>
+          <span class="header-left-search--label">Find Friends</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <nav class="header-right-nav">
+          <ul class="header-right-nav-list">
+            <li class="header-right-nav-list-item">
+              <a routerLink="/app/profile" class="notification-container">
+                <i class="far fa-grin"></i>
+                <span class="notification-counter notification-counter-smile">6</span>
+              </a>
+            </li>
+            <li class="header-right-nav-list-item">
+              <a routerLink="/app/profile" href="" class="notification-container">
+                <i class="far fa-comments"></i>
+                <span class="notification-counter notification-counter-messages">2</span>
+              </a>
+            </li>
+            <li class="header-right-nav-list-item">
+              <a routerLink="/app/profile" href="" class="notification-container">
+                <i class="fas fa-bolt"></i>
+                <span class="notification-counter notification-counter-bolt">8</span>
+              </a>
+            </li>
+          </ul>
+          <span id="search-icon"><i class="fas fa-search"></i></span>
+        </nav>
+        <div class="header-right--user-info">
+          <span class="header-right--user-info-icon">
+            <img class="notification-container" [src]="currentUser.profileIcon" alt="User icon">
+            <span class="notification-counter notification-counter-user-state"></span>
+          </span>
+          <span class="header-right--user-info-name">
+            <span class="fulname">{{currentUser.username}}</span><br>
+            <span class="nickname">{{currentUser.nickname}}</span>
+          </span>
+        </div>
+        <div class="header-right-message"><i class="far fa-comments"></i></div>
+      </div>
+    </div>
+  </header>
+  <div class="content" #backToTop>
+    <aside class="menu">
+      <nav>
+        <ul class="menu-list">
+          <li [attr.title]="'Menu'" class="menu-list--item">
+            <a href="#home" class="menu-link"><i class="fas fa-bars"></i></a>
+          </li>
+          <li [attr.title]="'Activity'" class="menu-list--item">
+            <a href="#news" class="menu-link"><i class="far fa-newspaper"></i></a>
+          </li>
+          <li [attr.title]="'Star'" class="menu-list--item">
+            <a href="#contact" class="menu-link"><i class="far fa-star"></i></a>
+          </li>
+          <li [attr.title]="'Friend'" class="menu-list--item">
+            <a href="#about" class="menu-link"><i class="far fa-meh"></i></a>
+          </li>
+          <li [attr.title]="'Music'" class="menu-list--item">
+            <a href="#about" class="menu-link"><i class="fas fa-headphones-alt"></i></a>
+          </li>
+          <li [attr.title]="'Weather'" class="menu-list--item">
+            <a href="#about" class="menu-link"><i class="fas fa-cloud-sun"></i></a>
+          </li>
+          <li [attr.title]="'Date'" class="menu-list--item">
+            <a href="#about" class="menu-link"><i class="far fa-calendar-alt"></i></a>
+          </li>
+          <li [attr.title]="'Goal'" class="menu-list--item">
+            <a href="#about" class="menu-link"><i class="far fa-dot-circle"></i></a>
+          </li>
+          <li [attr.title]="'Birthday'" class="menu-list--item">
+            <a href="#about" class="menu-link"><i class="fas fa-birthday-cake"></i></a>
+          </li>
+          <li [attr.title]="'Health'" class="menu-list--item">
+            <a href="#about" class="menu-link"><i class="fas fa-square-root-alt"></i></a>
+          </li>
+          <li [attr.title]="'Task'" class="menu-list--item">
+            <a href="#about" class="menu-link"><i class="fab fa-gitter"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content-main">
+      <section class="content-main-container">
+        <router-outlet></router-outlet>
+      </section>
+    </main>
+    <aside class="active-users">
+      <nav>
+        <ul class="active-users-list">
+          <li class="active-users-list-item notification-container" *ngFor="let user of users">
+            <img [attr.title]="user.username" class="active-users-list-item--user-icon" [src]="user.profileIcon" alt="User icon">
+            <span class="notification-counter notification-counter-user" [style.background-color]="user.state"></span>
+          </li>
+        </ul>
+      </nav>
+      <div class="active-users-options">
+        <div class="active-users-options-bar"><i class="fas fa-bars"></i></div>
+        <div class="active-users-options-message"><i class="far fa-comments"></i></div>
+      </div>
+    </aside>
+  </div>
+  <button class="btn btn-to-top" (click)="goToSection()"><i class="fas fa-arrow-up"></i></button>
+</div>

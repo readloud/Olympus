@@ -1,0 +1,24 @@
+<form class="register-information--form--info login" [formGroup]="user">
+  <input class="signup-input" formControlName="email" type="text" placeholder="Your email">
+  <input class="signup-input" formControlName="password" type="text" placeholder="Your password">
+  <div class="register-information--form--info-checkbox" style="display: inline-block; width: 50%">
+    <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" checked>
+    <label for="checkbox-1" class="checkbox-custom-label">
+      <span class="register-information--form--info-checkbox-label">Remember Me!</span>
+    </label>
+  </div>
+  <a routerLink="/login" class="login-link--forgot-password">Forgot my Password</a>
+  <button routerLink="/profile" type="button" class="btn register-information--form--info--register-button login-btn">Login</button>
+  <strong class="line-thru">OR</strong>
+  <button type="button" class="btn register-information--form--info--register-button login-btn--facebook">
+    <span><i class="fab fa-facebook-f"></i>Login with Facebook</span>
+  </button>
+  <button type="button" class="btn register-information--form--info--register-button login-btn--twitter">
+    <span><i class="fab fa-twitter"></i>Login with Twitter</span>
+  </button>
+  <p class="login--register-section">
+    Don't you have an account?
+    <a routerLink="/register" class="login--register-section-link">Register Now!</a>
+    It's really simple and you can start enjoying all the benefits!
+  </p>
+</form>

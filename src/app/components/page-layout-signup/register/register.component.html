@@ -1,0 +1,29 @@
+<form class="register-information--form--info" [formGroup]="user">
+  <div class="register-information--form--info--basic">
+    <input class="signup-input firstname-input" formControlName="firstname" type="text" placeholder="First name">
+    <input class="signup-input lastname-input" formControlName="lastname" type="text" placeholder="Last name">
+  </div>
+  <input class="signup-input" formControlName="email" type="text" placeholder="Your email">
+  <input class="signup-input" formControlName="password" type="text" placeholder="Your password">
+  <div class="signup-input-birthday">
+    <label for="birthday" >Your Birthday</label>
+    <input formControlName="birthday" type="datetime" id="birthday" />
+  </div>
+  <div class="signup-input-gender">
+    <label for="gender" >Your Gender</label>
+    <input formControlName="gender" type="text" id="gender" />
+  </div>
+  <div class="register-information--form--info-checkbox">
+    <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" checked>
+    <label for="checkbox-1" class="checkbox-custom-label">
+      <span class="register-information--form--info-checkbox-label">
+        I accept the
+        <a id="terms" href="/register">Terms and Conditions</a>
+        of the website
+      </span>
+    </label>
+  </div>
+  <button routerLink="/login" type="button" class="btn register-information--form--info--register-button">
+    Complete Registration!
+  </button>
+</form>
