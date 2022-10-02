@@ -1,0 +1,34 @@
+@import "~bootstrap/scss/bootstrap";
+@import "common/checkbox";
+@import "common/radio-button";
+@import "common/mixins";
+@import "./reset";
+@import "app-layout/profile-page/badge-article/badges/badges.component";
+
+html {
+  @include font-style(62.5%, 'Roboto');
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.background {
+  background: url('../assets/images/users-bg.png') repeat center center fixed;
+  height: 100vh;
+}
+
+.background-layout {
+  background-color: $app-bg-color;
+  overflow-x: hidden;
+}
+
+.card {
+  margin-top: 2rem;
+}
+
+@include responsive-below(sm) {
+  .card {
+    margin-top: 1.5rem;
+  }
+}

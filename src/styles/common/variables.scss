@@ -1,0 +1,87 @@
+@import '../../../node_modules/bootstrap/scss/_functions';
+@import '../../../node_modules/bootstrap/scss/_variables';
+
+// General
+$primary-color: $white;
+$secondary-color: $black;
+$border-color: $gray-200;
+$red-color: #F94F4F;
+$full-width: map_get($sizes, 100);
+$full-height: map_get($sizes, 100);
+$margin: $spacer;
+$border-radius: $rounded-pill;
+$link-hover: #03a9f4;
+$font-weight-basic: 600;
+
+// Login
+$login-btn-color: #F5411D;
+$login-btn-color-hover: #DE3B1A;
+$facebook-btn-color: #3b5998;
+$facebook-btn-color-hover: #325179;
+$twitter-btn-color: #0DC7EC;
+$twitter-btn-color-hover: #07ADCE;
+
+// Register
+$register-btn-color: #7F00FF;
+$register-btn-color-hover: #4C0099;
+
+// App layout
+$app-bg-color: #eff4f7;
+$shadow-color: #ccc;
+$shadow-color-secondary: rgba(0, 0, 0, 0.3);
+$app-header-bg-color: #323E4D;
+$text-color-secondary: #aaaaaa;
+$input-bg-color: #475464;
+$input-color: gray;
+$app-primary-color: $login-btn-color;
+$app-primary-color-hover: $login-btn-color-hover;
+$app-secondary-color: #8B4CD2;
+$app-third-color: #55ACEE;
+$active-user-state-color: #2ADC89;
+$gradient-color: rgba(215, 218, 216, .8);
+$sidebar-bg-color: #fefefe;
+$active-user-sidebar-menu-btn-color: #6c757d;
+$active-user-sidebar-message-btn-color: $app-secondary-color;
+
+// Profile
+$connection-btn-color: $login-btn-color;
+$connection-btn-color-hover: $login-btn-color-hover;
+$smile-btn-color-hover: #3399ff;
+$message-btn-color: $app-secondary-color;
+$message-btn-color-hover: $register-btn-color;
+
+
+// Badge
+$badge-color-1: #333;
+$badge-color-2: #808080;
+$badge-color-3: #8F06DE;
+$badge-color-4: #B658EC;
+$badge-color-5: #66cc00;
+$badge-color-6: #A7EC58;
+$badge-notification-primary-color: $app-third-color;
+$badge-notification-secondary-color: $red;
+$badge-notification-third-color: #33ffff;
+
+// Vote
+$position: 0, 1.3rem, 2.6rem, 3.9rem, 5.2rem, 6.5rem, 7.8rem, 9.2rem, 10.5rem, 11.8rem;
+
+// Post
+$post-primary-color: #A4A1A0;
+$post-border-color: rgba(0, 0, 0, 0.125);
+$button-dot-bg-color: #CDCDCD;
+
+// Checkbox
+$checkbox-bg-color: $white;
+$checkbox-border-color: $gray-200;
+
+//$layout-bg-color: rgba(247, 106, 63, 0.9);
+$layout-bg-color: rgba(223, 70, 40, 0.9);
+$layout-bg-color-hover: rgba(247, 106, 63, 0.5);
+$layout-font-color-primary: #ffffff;
+
+$breakpoints: (
+  xs: 36em,
+  sm: 48em,
+  md: 62em,
+  lg: 75em
+);

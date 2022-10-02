@@ -1,0 +1,112 @@
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.register-information--form--info {
+  @include button-style(register-information--form--info--register-button,
+                        $register-btn-color,
+                        $register-btn-color-hover);
+  padding: 2.5rem 2rem 3rem 2rem;
+
+  &--basic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .firstname-input, .lastname-input {
+    display: inline-block;
+    width: $full-width / 2 - 4;
+  }
+
+  .firstname-input {
+    margin-right: 2.2rem;
+  }
+
+  &-checkbox {
+    margin: 3rem 0 2.5rem 0;
+
+    &-label {
+      font-size: 1rem;
+
+      #terms {
+        color: $red;
+      }
+    }
+  }
+
+  &--register-button {
+    width: $full-width;
+    color: $primary-color;
+  }
+}
+
+.signup-input, .signup-input-birthday, .signup-input-gender {
+  margin: .5rem 0;
+  border: .1rem solid $border-color;
+  border-radius: 3px;
+}
+
+.signup-input::-webkit-input-placeholder {
+  font-size: 1.3rem;
+}
+
+.signup-input {
+  @include input-style(1.2rem 1.5rem, $primary-color, inherite, $primary-color, inherite);
+  box-shadow: none;
+}
+
+.signup-input-birthday, .signup-input-gender {
+  display: inline-block;
+  position: relative;
+  padding: .6rem 1.5rem;
+  width: $full-width;
+  -webkit-transition: all 320ms ease-in-out;
+  font-size: 1.4rem;
+
+  &:focus-within {
+    box-shadow: 0 0 .5rem rgba(81, 203, 238, 1);
+    border: .1rem solid rgba(81, 203, 238, 1);
+  }
+
+  input {
+    display: block;
+    width: $full-width;
+    outline: none;
+    border: none;
+    color: $gray-800;
+  }
+
+  label {
+    display: block;
+    color: $gray-600;
+    font-size: 1rem;
+  }
+}
+
+.signup-input-birthday {
+  @include input-icon("\f073");
+}
+
+.signup-input-gender {
+  @include input-icon("\f0d7");
+}
+
+@include responsive-below(lg) {
+  .signup-input-gender::after {
+    display: none;
+  }
+
+  .register-information--form--info--basic {
+    display: block;
+
+    .firstname-input, .lastname-input {
+      width: $full-width;
+    }
+  }
+}
+
+@include responsive-below(sm) {
+  #terms {
+    display: block;
+  }
+}

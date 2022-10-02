@@ -1,0 +1,69 @@
+@import "../register/register.component";
+@import "../page-layout-signup.component";
+
+.login {
+  @include button-style(login-btn, $login-btn-color, $login-btn-color-hover);
+  @include button-style(login-btn--facebook, $facebook-btn-color, $facebook-btn-color-hover);
+  @include button-style(login-btn--twitter, $twitter-btn-color, $twitter-btn-color-hover);
+
+  .fa-facebook-f, .fa-twitter {
+    margin-right: .6rem;
+  }
+
+  &-btn--twitter {
+    margin: 1rem 0 1.2rem 0;
+  }
+
+  &-link--forgot-password {
+    display: inline-block;
+    width: $full-width / 2;
+    color: inherit;
+    text-align: right;
+    font-size: 1rem;
+
+    &:hover {
+      color: $link-hover;
+    }
+  }
+
+  &--register-section {
+    line-height: 1.7;
+    font-size: 1rem;
+
+    &-link {
+      color: $red-color;
+    }
+  }
+}
+
+.line-thru {
+  display: block;
+  margin: 1.5rem 0;
+  position: relative;
+  width: $full-width;
+  z-index: 1;
+  text-align: center;
+  font-size: 1rem;
+
+  &::before {
+    width: 4rem;
+    height: 1rem;
+    background-color: $primary-color;
+    content: '';
+    margin: -0.5rem 0 0 -2rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+  }
+
+  &::after {
+    border-bottom: .1rem solid #dfe0e6;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 49%;
+    width: $full-width;
+    z-index: -2;
+  }
+}
